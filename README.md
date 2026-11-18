@@ -8,7 +8,9 @@
 
 ## Executive Overview
 
-A multi-property holiday letting platform engineered for real-time availability synchronization, cross-channel iCal calendar aggregation (Airbnb/VRBO), and commission-free direct guest reservations. Built with idempotent payment webhooks and deterministic double-booking prevention.
+## Executive Overview
+
+A multi-property holiday letting platform engineered for real-time availability synchronisation, cross-channel iCal calendar aggregation (Sykes Cottages / Airbnb / VRBO), and commission-free direct guest reservations. Built with idempotent payment webhooks and deterministic double-booking prevention.
 
 ### Key Performance & Quality Metrics
 * **Calendar Sync Accuracy:** Zero double-booking rate via automated 5-minute iCal feed polling and range conflict detection
@@ -34,7 +36,7 @@ sequenceDiagram
     actor Guest
     participant Web as Next.js Reservation Portal
     participant Sync as iCal Sync Worker
-    participant OTA as External Channels (Airbnb/VRBO)
+    participant OTA as External Channels (Sykes / Airbnb / VRBO)
     participant Payment as Stripe API
 
     Sync->>OTA: Polls External iCal Feeds (5-min interval)
